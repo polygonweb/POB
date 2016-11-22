@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]><html class="ie ltie8 ltie9 ltie10" lang="ru"><![endif]-->
+<!--[if IE 8]><html class="ie ie8 ltie9 ltie10" lang="ru"><![endif]-->
+<!--[if IE 9]><html class="ie gtie8 ie9 lteie9 ltie10" lang="ru"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="ru"><!--><![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- стили -->
+    <!-- нормализация дефолтных стилей браузеров -->
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!-- стилизация скролла -->
+    <link rel="stylesheet" href="css/perfect-scrollbar.css">
+
+    <!-- выпадающий списк chosen -->
+    <link rel="stylesheet" href="css/chosen.css">
+
+    <!-- основные стили -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- скрипты -->
+    <!-- стилизация скролла -->
+    <script src="js/perfect-scrollbar.js"></script>
+
+    <!-- полифилл для упраления css-классами classList -->
+    <script src="js/classList.js"></script>
+
+    <!-- полифилл для метода closest -->
+    <script src="js/closest-polyfill.js"></script>
+
+    <script src="js/jquery-2.1.4.min.js"></script>
+
+    <!-- выпадающий списк chosen -->
+    <script src="js/chosen.jquery.min.js"></script>
+
+    <!-- основные скрипты -->
+    <script src="js/scripts.js"></script>
+
+    <title>Личный кабинет. Открытый бюджет (ПОБ)</title>
+</head>
+<body class="page">
+
+    <!-- page__main-nav -->
+    <div class="page__main-nav menu">
+       <div class="menu__list style-scroll">
+            <a class="menu__item menu__item_log menu__item_active" href="#" title="Журнал"></a>
+            <a class="menu__item menu__item_docs" href="#" title="НПА и документы"></a>
+            <a class="menu__item menu__item_messages" href="#" title="Сообщения"></a>
+            <a class="menu__item menu__item_budget" href="#" title="Бюджет"></a>
+       </div>
+       <a class="menu__item menu__item_logout" href="#" title="Выйти"></a>
+    </div>
+    <!-- ./page__main-nav -->
+
+    <!-- page__side-nav -->
+    <div class="page__side-nav">
+
+        <!-- side-menu -->
+        <div class="side-menu">
+            <header class="side-menu__head">
+                <h2 class="heading side-menu__title">Управление данными</h2>
+                <form class="side-menu__search-form">
+                    <input class="input input_full input_search" type="text" placeholder="Найти...">
+                </form>
+            </header>
+            <ul class="side-list side-menu__body">
+                <li class="side-list__item side-list__item_active">
+                    <a class="side-list__item-text" href="#">Пункт 1. Текущий пункт</a>
+                </li>
+                <li class="side-list__item side-list__item_has-sub-menu">
+                    <a class="side-list__item-text" href="#">Пункт 2 c вложенным меню</a>
+                    <!-- side-menu -->
+                    <div class="side-menu">
+                        <header class="side-menu__head">
+                            <a class="side-menu__back-link back-link" href="#" tabindex="-1">Назад</a>
+                            <h2 class="heading side-menu__title">Управление данными</h2>
+                            <form class="side-menu__search-form">
+                                <input class="input input_full input_search" type="text" placeholder="Найти..." tabindex="-1">
+                            </form>
+                        </header>
+                        <ul class="side-list side-menu__body">
+                            <li class="side-list__item">
+                                <a class="side-list__item-text" href="#" tabindex="-1">Мониторинг</a>
+                            </li>
+                            <li class="side-list__item side-list__item_active">
+                                <a class="side-list__item-text" href="#" tabindex="-1">Макроэкономика</a>
+                            </li>
+                            <li class="side-list__item">
+                                <a class="side-list__item-text" href="#" tabindex="-1">HTML-объекты</a>
+                            </li>
+                            <li class="side-list__item">
+                                <a class="side-list__item-text" href="#" tabindex="-1">Дорожный фонд</a>
+                            </li>
+                            <li class="side-list__item">
+                                <a class="side-list__item-text" href="#" tabindex="-1">Бюджет</a>
+                                <ul class="side-list">
+                                    <li class="side-list__item">
+                                        <a class="side-list__item-text" href="#" tabindex="-1">Lorem ipsum.</a>
+                                    </li>
+                                    <li class="side-list__item">
+                                        <a class="side-list__item-text" href="#" tabindex="-1">Lorem ipsum dolor sit amet, consectetur adipisicing.</a>
+                                    </li>
+                                    <li class="side-list__item">
+                                        <a class="side-list__item-text" href="#" tabindex="-1">Lorem ipsum dolor sit amet</a>
+                                    </li>
+                                    <li class="side-list__item">
+                                        <a class="side-list__item-text" href="#" tabindex="-1">Lorem ipsum dolor sit amet</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="side-list__item side-list__item_has-sub-menu">
+                                <a class="side-list__item-text" href="#" tabindex="-1">Исполнение бюджета</a>
+                                <!-- side-menu -->
+                                <div class="side-menu">
+                                    <header class="side-menu__head">
+                                        <a class="side-menu__back-link back-link" href="#" tabindex="-1">Назад</a>
+                                        <h2 class="heading side-menu__title">Управление данными</h2>
+                                        <form class="side-menu__search-form">
+                                            <input class="input input_full input_search" type="text" placeholder="Найти...">
+                                        </form>
+                                    </header>
+                                    <ul class="side-list side-menu__body">
+                                        <li class="side-list__item side-list__item_active">
+                                            <a class="side-list__item-text" href="#">Пункт 1. Текущий пункт</a>
+                                        </li>
+                                        <li class="side-list__item side-list__item_has-sub-menu">
+                                            <a class="side-list__item-text" href="#">Пункт 2 c вложенным меню</a>
+                                            <!-- side-menu -->
+                                            <div class="side-menu">
+                                                <header class="side-menu__head">
+                                                    <a class="side-menu__back-link back-link" href="#" tabindex="-1">Назад</a>
+                                                    <h2 class="heading side-menu__title">Управление данными</h2>
+                                                    <form class="side-menu__search-form">
+                                                        <input class="input input_full input_search" type="text" placeholder="Найти..." tabindex="-1">
+                                                    </form>
+                                                </header>
+                                                <ul class="side-list side-menu__body">
+                                                    <li class="side-list__item">
+                                                        <a class="side-list__item-text" href="#" tabindex="-1">Мониторинг</a>
+                                                    </li>
+                                                    <li class="side-list__item side-list__item_active">
+                                                        <a class="side-list__item-text" href="#" tabindex="-1">Макроэкономика</a>
+                                                    </li>
+                                                    <li class="side-list__item">
+                                                        <a class="side-list__item-text" href="#" tabindex="-1">HTML-объекты</a>
+                                                    </li>
+                                                    <li class="side-list__item">
+                                                        <a class="side-list__item-text" href="#" tabindex="-1">Дорожный фонд</a>
+                                                    </li>
+                                                    <li class="side-list__item">
+                                                        <a class="side-list__item-text" href="#" tabindex="-1">Бюджет</a>
+                                                        <ul class="side-list">
+                                                            <li class="side-list__item">
+                                                                <a class="side-list__item-text" href="#" tabindex="-1">Lorem ipsum.</a>
+                                                            </li>
+                                                            <li class="side-list__item">
+                                                                <a class="side-list__item-text" href="#" tabindex="-1">Lorem ipsum dolor sit amet, consectetur adipisicing.</a>
+                                                            </li>
+                                                            <li class="side-list__item">
+                                                                <a class="side-list__item-text" href="#" tabindex="-1">Lorem ipsum dolor sit amet</a>
+                                                            </li>
+                                                            <li class="side-list__item">
+                                                                <a class="side-list__item-text" href="#" tabindex="-1">Lorem ipsum dolor sit amet</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="side-list__item">
+                                                        <a class="side-list__item-text" href="#" tabindex="-1">Исполнение бюджета</a>
+                                                    </li>
+                                                    <li class="side-list__item">
+                                                        <a class="side-list__item-text" href="#" tabindex="-1">Адресная инвестиционная программа</a>
+                                                    </li>
+                                                     <li class="side-list__item">
+                                                        <a class="side-list__item-text" href="#" tabindex="-1">Бюджетная сеть</a>
+                                                    </li>
+                                                    <li class="side-list__item">
+                                                        <a class="side-list__item-text" href="#" tabindex="-1">Межбюджетные отношения</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!-- ./side-menu -->
+                                        </li>
+                                        <li class="side-list__item">
+                                            <a class="side-list__item-text" href="#">HTML-объекты</a>
+                                        </li>
+                                        <li class="side-list__item">
+                                            <a class="side-list__item-text" href="#">Дорожный фонд</a>
+                                        </li>
+                                        <li class="side-list__item">
+                                            <a class="side-list__item-text" href="#">Бюджет</a>
+                                            <ul class="side-list">
+                                                <li class="side-list__item">
+                                                    <a class="side-list__item-text" href="#">Lorem ipsum.</a>
+                                                </li>
+                                                <li class="side-list__item">
+                                                    <a class="side-list__item-text" href="#">Lorem ipsum dolor sit amet, consectetur adipisicing.</a>
+                                                </li>
+                                                <li class="side-list__item">
+                                                    <a class="side-list__item-text" href="#">Lorem ipsum dolor sit amet</a>
+                                                </li>
+                                                <li class="side-list__item">
+                                                    <a class="side-list__item-text" href="#">Lorem ipsum dolor sit amet</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="side-list__item">
+                                            <a class="side-list__item-text" href="#">Исполнение бюджета</a>
+                                        </li>
+                                        <li class="side-list__item">
+                                            <a class="side-list__item-text" href="#">Адресная инвестиционная программа</a>
+                                        </li>
+                                         <li class="side-list__item">
+                                            <a class="side-list__item-text" href="#">Бюджетная сеть</a>
+                                        </li>
+                                        <li class="side-list__item">
+                                            <a class="side-list__item-text" href="#">Межбюджетные отношения</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- ./side-menu -->
+                            </li>
+                            <li class="side-list__item">
+                                <a class="side-list__item-text" href="#" tabindex="-1">Адресная инвестиционная программа</a>
+                            </li>
+                             <li class="side-list__item">
+                                <a class="side-list__item-text" href="#" tabindex="-1">Бюджетная сеть</a>
+                            </li>
+                            <li class="side-list__item">
+                                <a class="side-list__item-text" href="#" tabindex="-1">Межбюджетные отношения</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- ./side-menu -->
+                </li>
+                <li class="side-list__item">
+                    <a class="side-list__item-text" href="#">HTML-объекты</a>
+                </li>
+                <li class="side-list__item">
+                    <a class="side-list__item-text" href="#">Дорожный фонд</a>
+                </li>
+                <li class="side-list__item">
+                    <a class="side-list__item-text" href="#">Бюджет</a>
+                    <ul class="side-list">
+                        <li class="side-list__item">
+                            <a class="side-list__item-text" href="#">Lorem ipsum.</a>
+                        </li>
+                        <li class="side-list__item">
+                            <a class="side-list__item-text" href="#">Lorem ipsum dolor sit amet, consectetur adipisicing.</a>
+                        </li>
+                        <li class="side-list__item">
+                            <a class="side-list__item-text" href="#">Lorem ipsum dolor sit amet</a>
+                        </li>
+                        <li class="side-list__item">
+                            <a class="side-list__item-text" href="#">Lorem ipsum dolor sit amet</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="side-list__item">
+                    <a class="side-list__item-text" href="#">Исполнение бюджета</a>
+                </li>
+                <li class="side-list__item">
+                    <a class="side-list__item-text" href="#">Адресная инвестиционная программа</a>
+                </li>
+                 <li class="side-list__item">
+                    <a class="side-list__item-text" href="#">Бюджетная сеть</a>
+                </li>
+                <li class="side-list__item">
+                    <a class="side-list__item-text" href="#">Межбюджетные отношения</a>
+                </li>
+            </ul>
+        </div>
+        <!-- ./side-menu -->
+
+    </div>
+    <!-- ./page__side-nav -->
+
+    <!-- page__main -->
+    <div class="page__main">
+        <div class="head">
+            <div class="head__tools head-tools">
+                <div class="head-tools__group">
+                    <button class="head-tools__item btn">button 1</button>
+                    <button class="head-tools__item btn">button 2</button>
+                </div>
+                <div class="head-tools__group">
+                    <button class="head-tools__item btn">button</button>
+                    <input class="head-tools__item input" type="text" placeholder="Найти...">
+                </div>
+            </div>
+            <div class="head__content">
+                <button class="side-toggle" id="sideCollapseBtnId"></button>
+                <h2 class="head__title heading">UI Kit</h2>
+            </div>
+        </div>
+
+        <div class="page__content">
+
+            <style>
+                .uik-section {
+                    padding: 2em 2em 3em;
+                }
+                    .uik-section__title {
+                        margin-bottom: 1em;
+                    }
+            </style>
+
+            <div class="uik-section">
+                <h2 class="heading uik-section__title">Текстовые поля</h2>
+
+                <input class="input" type="text" placeholder="Введите что-нибудь...">
+                <input class="input input_search" type="text">
+                <input class="input input_date" type="text">
+            </div>
+
+            <div class="uik-section">
+                <h2 class="heading uik-section__title">Заголовки</h2>
+
+                <h3 class="heading">Lorem ipsum dolor.</h3>
+            </div>
+
+            <div class="uik-section">
+                <h2 class="heading uik-section__title">Ссылки</h2>
+
+                <a class="link" href="#">Ссылка</a>
+
+                <br><br>
+
+                <a class="back-link" href="#">Ссылка назад</a>
+
+                <br><br>
+
+                <a class="back-link back-link_down" href="#">Ссылка назад</a>
+
+                <br><br>
+
+                <a class="forward-link" href="#">Ссылка</a>
+            </div>
+
+            <div class="uik-section">
+                <h2 class="heading uik-section__title">Checkbox and Radiobutton</h2>
+
+                <div class="control control_checkbox">
+                    <input class="control__input" type="checkbox">
+                    <span class="control__fake"></span>
+                </div>
+                <div class="control control_checkbox">
+                    <input class="control__input" type="checkbox" checked>
+                    <span class="control__fake"></span>
+                </div>
+
+                <br><br>
+
+                 <div class="control control_radio">
+                    <input class="control__input" type="radio" name="radio-group">
+                    <span class="control__fake"></span>
+                </div>
+                <div class="control control_radio">
+                    <input class="control__input" checked type="radio" name="radio-group">
+                    <span class="control__fake"></span>
+                </div>
+
+                <br><br>
+
+                <h2 class="heading uik-section__title">Контролы с текстом</h2>
+                <div class="control control_checkbox control_text">
+                    <input class="control__input" type="checkbox">
+                    <span class="control__fake"></span>
+                    <label>Выбрать...</label>
+                </div>
+                <div class="control control_radio control_text">
+                    <input class="control__input" type="radio">
+                    <span class="control__fake"></span>
+                    <label>Выбрать...</label>
+                </div>
+
+            </div>
+
+            <div class="uik-section">
+                <h2 class="heading uik-section__title">Блок со стилизованным скроллом</h2>
+
+                <div class="style-scroll" style="display: inline-block; position: relative; width: 200px; height: 100px;">
+                    <div style="width: 400px; height: 400px; padding: 1em; color: #fff; background: #666;">
+                        наведите мышь и прокрутите
+                    </div>
+                </div>
+                 <div class="style-scroll" style="display: inline-block; position: relative; width: 200px; height: 100px;">
+                    <div style="width: 400px; height: 400px; padding: 1em; ">
+                        наведите мышь и прокрутите
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="uik-section">
+                <h2 class="heading uik-section__title">Кнопки</h2>
+
+
+                   <button class="btn">Button</button>
+                   <a class="btn" href="#404">Button</a>
+
+                    <br><br>
+
+                    <button class="btn btn_theme_dark">Button</button>
+                    <a class="btn btn_theme_dark" href="#404">Button</a>
+
+                    <br><br>
+
+                    <button class="btn btn_theme_light">Button</button>
+                    <a class="btn btn_theme_light" href="#404">Button</a>
+
+                    <br><br>
+
+                    <button class="btn btn_theme_add">Button</button>
+                    <a class="btn btn_theme_add" href="#404">Button</a>
+
+                    <br><br>
+
+                    <button class="btn btn_theme_del">Button</button>
+                    <a class="btn btn_theme_del" href="#404">Button</a>
+
+                    <br><br>
+
+                    <button class="btn btn_theme_edit">Button</button>
+                    <a class="btn btn_theme_edit" href="#404">Button</a>
+
+                    <br><br>
+
+                    <h2 class="heading uik-section__title">Кнопки с иконками</h2>
+
+                    <a class="btn btn_theme_add btn_ico_add" href="#">
+                        <span class="btn__text">Добавить</span>
+                    </a>
+                    <a class="btn btn_theme_edit btn_ico_edit" href="#">
+                        <span class="btn__text">Редактировать</span>
+                    </a>
+                    <a class="btn btn_theme_del btn_ico_del" href="#">
+                        <span class="btn__text">Удалить</span>
+                    </a>
+                    <a class="btn btn_theme_del btn_ico_close" href="#">
+                        <span class="btn__text">Отменить</span>
+                    </a>
+
+                    <a class="btn btn_theme_add  btn_ico_only  btn_ico_add" href="#"></a>
+                    <a class="btn btn_theme_edit btn_ico_only  btn_ico_edit" href="#"></a>
+                    <a class="btn btn_theme_del  btn_ico_only  btn_ico_del" href="#"></a>
+                    <a class="btn btn_theme_del  btn_ico_only  btn_ico_close" href="#"></a>
+
+                    <br><br>
+
+                    <a class="btn btn_theme_dark btn_ico_only  btn_ico_mes" href="#"></a>
+                    <a class="btn btn_theme_dark btn_ico_only  btn_ico_error" href="#"></a>
+                    <a class="btn btn_theme_dark btn_ico_only  btn_ico_forward" href="#"></a>
+                    <a class="btn btn_theme_dark btn_ico_only  btn_ico_pub" href="#"></a>
+                    <a class="btn btn_theme_dark btn_ico_only  btn_ico_divide" href="#"></a>
+
+                    <a class="btn btn_theme_dark btn_ico_mes" href="#">
+                        <span class="btn__text">Button</span>
+                    </a>
+                    <a class="btn btn_theme_dark btn_ico_error" href="#">
+                        <span class="btn__text">Button</span>
+                    </a>
+                    <a class="btn btn_theme_dark btn_ico_forward" href="#">
+                        <span class="btn__text">Button</span>
+                    </a>
+                    <a class="btn btn_theme_dark btn_ico_pub" href="#">
+                        <span class="btn__text">Button</span>
+                    </a>
+                    <a class="btn btn_theme_dark btn_ico_divide" href="#">
+                        <span class="btn__text">Button</span>
+                    </a>
+
+
+                    <br><br>
+
+                    <h2 class="heading uik-section__title">Группа кнопок</h2>
+                    <div class="btn-group">
+                       <button class="btn-group__item btn-group__item_active btn">Button</button>
+                       <button class="btn-group__item btn">Button</button>
+                       <button class="btn-group__item btn">Button</button>
+                    </div>
+            </div>
+
+            <div class="uik-section">
+                <h2 class="heading uik-section__title">Таблицы</h2>
+
+                <div class="table-wrap ">
+                    <div class="table-wrap__head">
+                        <table class="data-table">
+                            <colgroup>
+                                <col style="width: 20%;">
+                                <col style="width: 20%;">
+                                <col style="width: 20%;">
+                                <col style="width: 20%;">
+                                <col style="width: 20%;">
+                            </colgroup>
+                            <thead class="data-table__head">
+                                <tr class="data-table__row">
+                                    <th class="data-table__cell data-table__cell_head data-table__cell_id" rowspan="2">Дата и время</th>
+                                    <th class="data-table__cell data-table__cell_head" rowspan="2">Действие</th>
+                                    <th class="data-table__cell data-table__cell_head">Таблица</th>
+                                    <th class="data-table__cell data-table__cell_head data-table__cell_border-right_off" colspan="2">Имя аттрибута</th>
+                                </tr>
+                                <tr class="data-table__row">
+                                    <th class="data-table__cell data-table__cell_head">Таблица</th>
+                                    <th class="data-table__cell data-table__cell_head">Имя аттрибута</th>
+                                    <th class="data-table__cell data-table__cell_head data-table__cell_border-right_off">Значение аттрибута</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div class="table-wrap__body">
+                        <table class="data-table data-table_row-hover">
+                            <colgroup>
+                                <col style="width: 20%;">
+                                <col style="width: 20%;">
+                                <col style="width: 20%;">
+                                <col style="width: 20%;">
+                                <col style="width: 20%;">
+                            </colgroup>
+                            <tbody class="data-table__body">
+                                <tr class="data-table__row">
+                                    <td class="data-table__cell data-table__cell_title" colspan="5">О бюджете</td>
+                                </tr>
+                                <tr class="data-table__row">
+                                    <td class="data-table__cell">16.06.2014 16:48:20</td>
+                                    <td class="data-table__cell">Изменение</td>
+                                    <td class="data-table__cell">data_debt</td>
+                                    <td class="data-table__cell">value</td>
+                                    <td class="data-table__cell">113012.8</td>
+                                </tr>
+                                 <tr class="data-table__row">
+                                    <td class="data-table__cell">16.06.2014 16:48:20</td>
+                                    <td class="data-table__cell">Изменение</td>
+                                    <td class="data-table__cell">data_debt</td>
+                                    <td class="data-table__cell">value</td>
+                                    <td class="data-table__cell">113012.8</td>
+                                </tr>
+                                 <tr class="data-table__row">
+                                    <td class="data-table__cell">16.06.2014 16:48:20</td>
+                                    <td class="data-table__cell" rowspan="2">data_debt</td>
+                                    <td class="data-table__cell">Изменение</td>
+                                    <td class="data-table__cell"rowspan="2">113012.8</td>
+                                    <td class="data-table__cell">value</td>
+                                </tr>
+                                 <tr class="data-table__row">
+                                    <td class="data-table__cell">16.06.2014 16:48:20</td>
+                                    <td class="data-table__cell">Изменение</td>
+                                    <td class="data-table__cell">113012.8</td>
+                                </tr>
+                                 <tr class="data-table__row">
+                                    <td class="data-table__cell">16.06.2014 16:48:20</td>
+                                    <td class="data-table__cell">Изменение</td>
+                                    <td class="data-table__cell">data_debt</td>
+                                    <td class="data-table__cell">value</td>
+                                    <td class="data-table__cell">113012.8</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <br><br><br><br><br>
+
+                <div class="table-wrap ">
+                    <div class="table-wrap__head">
+                        <table class="data-table">
+                            <colgroup>
+                                <col style="width: 50px">
+                                <col style="width: ">
+                                <col style="width: ">
+                                <col style="width: ">
+                                <col style="">
+                            </colgroup>
+                            <thead class="data-table__head">
+                                <tr class="data-table__row">
+                                    <th class="data-table__cell data-table__cell_head data-table__cell_id">ID</th>
+                                    <th class="data-table__cell data-table__cell_head">Lorem ipsum.</th>
+                                    <th class="data-table__cell data-table__cell_head">Lorem ipsum.</th>
+                                    <th class="data-table__cell data-table__cell_head">Lorem ipsum dolor.</th>
+                                    <th class="data-table__cell data-table__cell_head data-table__cell_border-right_off">Lorem ipsum.</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div class="table-wrap__body">
+                        <table class="data-table data-table_row-hover">
+                            <colgroup>
+                                <col style="width: 50px">
+                                <col style="width: ">
+                                <col style="width: ">
+                                <col style="width: ">
+                                <col style="">
+                            </colgroup>
+                            <tbody class="data-table__body">
+                                <tr class="data-table__row">
+                                    <td class="data-table__cell data-table__cell_title" colspan="5">Заголовок</td>
+                                </tr>
+                                <tr class="data-table__row">
+                                    <td class="data-table__cell">1</td>
+                                    <td class="data-table__cell data-table__cell_input"><input class="input input_full" type="text"></td>
+                                    <td class="data-table__cell data-table__cell_input"><input class="input input_full" type="text"></td>
+                                    <td class="data-table__cell data-table__cell_input"><input class="input input_full" type="text"></td>
+                                    <td class="data-table__cell data-table__cell_input"><input class="input input_full" type="text"></td>
+                                </tr>
+                                <tr class="data-table__row data-table__row_selected">
+                                    <td class="data-table__cell">2</td>
+                                    <td class="data-table__cell data-table__cell_input"><input class="input input_full" type="text"></td>
+                                    <td class="data-table__cell data-table__cell_input"><input class="input input_full" type="text"></td>
+                                    <td class="data-table__cell data-table__cell_input"><input class="input input_full" type="text"></td>
+                                    <td class="data-table__cell data-table__cell_input"><input class="input input_full" type="text"></td>
+                                </tr>
+                                <tr class="data-table__row">
+                                    <td class="data-table__cell">3</td>
+                                    <td class="data-table__cell data-table__cell_input"><input class="input input_full" type="text"></td>
+                                    <td class="data-table__cell data-table__cell_input"><input class="input input_full" type="text"></td>
+                                    <td class="data-table__cell data-table__cell_input"><input class="input input_full" type="text"></td>
+                                    <td class="data-table__cell data-table__cell_input"><input class="input input_full" type="text"></td>
+                                </tr>
+                                <tr class="data-table__row">
+                                    <td class="data-table__cell">4</td>
+                                    <td class="data-table__cell data-table__cell_input"><input class="input input_full" type="text"></td>
+                                    <td class="data-table__cell data-table__cell_input"><input class="input input_full" type="text"></td>
+                                    <td class="data-table__cell data-table__cell_input"><input class="input input_full" type="text"></td>
+                                    <td class="data-table__cell data-table__cell_input"><input class="input input_full" type="text"></td>
+                                </tr>
+                                <tr class="data-table__row">
+                                    <td class="data-table__cell">5</td>
+                                    <td class="data-table__cell data-table__cell_input"><input class="input input_full" type="text"></td>
+                                    <td class="data-table__cell data-table__cell_input"><input class="input input_full" type="text"></td>
+                                    <td class="data-table__cell data-table__cell_input"><input class="input input_full" type="text"></td>
+                                    <td class="data-table__cell data-table__cell_input"><input class="input input_full" type="text"></td>
+                                </tr>
+                                <tr class="data-table__row">
+                                    <td class="data-table__cell">6</td>
+                                    <td class="data-table__cell data-table__cell_input"><input class="input input_full" type="text"></td>
+                                    <td class="data-table__cell data-table__cell_input"><input class="input input_full" type="text"></td>
+                                    <td class="data-table__cell data-table__cell_input"><input class="input input_full" type="text"></td>
+                                    <td class="data-table__cell data-table__cell_input"><input class="input input_full" type="text"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="uik-section">
+                <h2 class="heading uik-section__title">Панели</h2>
+
+                <!-- в артибут data-panel-target передаем css-селектор панели, которую ходим показать,
+                    в данном случае data-panel-target="#panel-id-1" -->
+                <p>в артибут data-panel-target передаем css-селектор панели, которую ходим показать, в данном случае data-panel-target="#panel-id-1"</p>
+                <button class="btn" data-panel-target="#panel-id-1">Показать панель</button>
+
+                <button class="btn" data-panel-target="#panel-id-2">Показать широкую панель</button>
+            </div>
+        </div>
+    </div>
+    <!-- ./page__main -->
+
+
+    <div class="overlay overlay_show"></div>
+
+    <form id="panel-id-1" class="panel panel_side panel_side_open">
+        <header class="panel__head head">
+            <div class="head__tools">
+                <button class="btn btn_ico_only panel__close" type="button"></button>
+            </div>
+            <div class="head__content">
+                <h2 class="head__title heading">Редактирование</h2>
+            </div>
+        </header>
+
+        <!--
+            футер с кнопками нужно помещать сразу после header'а
+        -->
+        <div class="panel__foot">
+            <div class="panel__foot-left">
+                <button class="btn btn_theme_add" type="submit">Сохранить</button>
+            </div>
+            <div class="panel__foot-right">
+                <button class="btn btn_theme_del" type="reset">Отменить</button>
+            </div>
+        </div>
+
+        <div class="panel__body">
+            <div class="form-field form-field_divide">
+                <label class="form-field__label">Город</label>
+                <input class=" input input_full" type="text" value="Берлин">
+            </div>
+
+            <div class="form-field form-field_divide">
+                <label class="form-field__label">Герб</label>
+                <input class=" input input_full" type="text" value="img/berlin.png">
+            </div>
+
+            <div class="form-field form-field_divide">
+                <label class="form-field__label">HTML</label>
+                <textarea class=" input input_full input_multiline"></textarea>
+            </div>
+
+            <div class="form-field form-field_divide">
+                <label class="form-field__label">Прикрепленный файл</label>
+                <div class="doc-link">
+                    <a class="link" href="#">Данные отчета УФНС России по г. Москве</a>
+                </div>
+                <button class="btn btn_theme_dark">Выбрать другой файл...</button>
+            </div>
+        </div>
+    </form>
+
+    <form id="panel-id-2" class="panel panel_wide panel_side">
+        <header class="panel__head head">
+            <div class="head__tools">
+                <button class="btn btn_ico_only panel__close" type="button"></button>
+            </div>
+            <div class="head__content">
+                <h2 class="head__title heading">Редактирование</h2>
+            </div>
+        </header>
+
+        <!--
+            футер с кнопками нужно помещать сразу после header'а
+        -->
+        <div class="panel__foot">
+            <div class="panel__foot-left">
+                <button class="btn btn_theme_add" type="submit">Сохранить</button>
+            </div>
+            <div class="panel__foot-right">
+                <button class="btn btn_theme_del" type="reset">Отменить</button>
+            </div>
+        </div>
+
+        <div class="panel__body">
+            <div class="form-field form-field_divide">
+                <label class="form-field__label">Город</label>
+                <input class=" input input_full" type="text" value="Берлин">
+            </div>
+
+            <div class="form-field form-field_divide">
+                <label class="form-field__label">Герб</label>
+                <input class=" input input_full" type="text" value="img/berlin.png">
+            </div>
+
+            <div class="form-field form-field_divide">
+                <label class="form-field__label">HTML</label>
+                <textarea class=" input input_full input_multiline"></textarea>
+            </div>
+
+            <div class="form-field form-field_divide">
+                <label class="form-field__label">Прикрепленный файл</label>
+                <div class="doc-link">
+                    <a class="link" href="#">Данные отчета УФНС России по г. Москве</a>
+                </div>
+                <button class="btn btn_theme_dark">Выбрать другой файл...</button>
+            </div>
+        </div>
+    </form>
+
+</body>
+</html>

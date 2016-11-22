@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<!--[if lt IE 8]><html class="ie ltie8 ltie9 ltie10" lang="ru"><![endif]-->
+<!--[if IE 8]><html class="ie ie8 ltie9 ltie10" lang="ru"><![endif]-->
+<!--[if IE 9]><html class="ie gtie8 ie9 lteie9 ltie10" lang="ru"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="ru"><!--><![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- стили -->
+    <!-- нормализация дефолтных стилей браузеров -->
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <!-- стилизация скролла -->
+    <link rel="stylesheet" href="css/perfect-scrollbar.css">
+
+    <!-- выпадающий списк chosen -->
+    <link rel="stylesheet" href="css/chosen.css">
+
+    <!-- основные стили -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- скрипты -->
+    <!-- стилизация скролла -->
+    <script src="js/perfect-scrollbar.js"></script>
+
+    <!-- полифилл для упраления css-классами classList -->
+    <script src="js/classList.js"></script>
+
+    <!-- полифилл для метода closest -->
+    <script src="js/closest-polyfill.js"></script>
+
+    <script src="js/jquery-2.1.4.min.js"></script>
+
+    <!-- выпадающий списк chosen -->
+    <script src="js/chosen.jquery.min.js"></script>
+
+    <!-- основные скрипты -->
+    <script src="js/scripts.js"></script>
+
+    <title>Личный кабинет. Открытый бюджет (ПОБ)</title>
+</head>
+<body class="page">
+
+    <!-- page__main-nav -->
+    <div class="page__main-nav menu">
+       <div class="menu__list style-scroll">
+            <a class="menu__item menu__item_log" href="#" title="Журнал"></a>
+            <a class="menu__item menu__item_docs menu__item_active" href="#" title="НПА и документы"></a>
+            <a class="menu__item menu__item_messages" href="#" title="Сообщения"></a>
+            <a class="menu__item menu__item_budget" href="#" title="Бюджет"></a>
+       </div>
+       <a class="menu__item menu__item_logout" href="#" title="Выйти"></a>
+    </div>
+    <!-- ./page__main-nav -->
+
+    <!-- page__side-nav -->
+    <div class="page__side-nav">
+
+        <!-- side-menu -->
+        <div class="side-menu">
+            <header class="side-menu__head">
+                <h2 class="heading side-menu__title">Управление данными</h2>
+                <form class="side-menu__search-form">
+                    <input class="input input_full input_search" type="text" placeholder="Найти...">
+                </form>
+            </header>
+            <ul class="side-list side-menu__body">
+                <li class="side-list__item">
+                    <a class="side-list__item-text" href="#">НПА и документы</a>
+                </li>
+                <li class="side-list__item side-list__item_has-sub-menu">
+                    <a class="side-list__item-text" href="#">Макроэкономика</a>
+                    <!-- side-menu -->
+                    <div class="side-menu">
+                        <header class="side-menu__head">
+                            <a class="side-menu__back-link back-link" href="#" tabindex="-1">Назад</a>
+                            <h2 class="heading side-menu__title">Макроэкономика</h2>
+                            <form class="side-menu__search-form">
+                                <input class="input input_full input_search" type="text" placeholder="Найти...">
+                            </form>
+                        </header>
+                        <ul class="side-list side-menu__body">
+                            <li class="side-list__item">
+                                <a class="side-list__item-text" href="#">Паспорта городов мира</a>
+                                <ul class="side-list">
+                                    <li class="side-list__item">
+                                        <a class="side-list__item-text" href="#">Справочник городов мира</a>
+                                    </li>
+                                    <li class="side-list__item">
+                                        <a class="side-list__item-text" href="#">Справочник групп показателей по городам мира</a>
+                                    </li>
+                                    <li class="side-list__item">
+                                        <a class="side-list__item-text" href="#">Справочник показателей городов мира</a>
+                                    </li>
+                                    <li class="side-list__item">
+                                        <a class="side-list__item-text" href="#">Справочник значений показателей городов мира</a>
+                                    </li>
+                                    <li class="side-list__item">
+                                        <a class="side-list__item-text" href="#">Справочник источников данных для паспортов городов мира</a>
+                                    </li>
+                                    <li class="side-list__item">
+                                        <a class="side-list__item-text" href="#">Связь источника и объекта</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="side-list__item">
+                                <a class="side-list__item-text" href="#">Ключевые показатели развития</a>
+                            </li>
+                            <li class="side-list__item">
+                                <a class="side-list__item-text" href="#">Основные параметры бюджетов</a>
+                            </li>
+                            <li class="side-list__item">
+                                <a class="side-list__item-text" href="#">Сбор данных</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- ./side-menu -->
+                </li>
+                <li class="side-list__item">
+                    <a class="side-list__item-text" href="#">HTML-объекты</a>
+                </li>
+                <li class="side-list__item side-list__item_has-sub-menu">
+                    <a class="side-list__item-text" href="#">Дорожный фонд</a>
+                </li>
+                <li class="side-list__item side-list__item_has-sub-menu">
+                    <a class="side-list__item-text" href="#">Бюджет</a>
+                </li>
+                <li class="side-list__item side-list__item_has-sub-menu side-list__item_active">
+                    <a class="side-list__item-text" href="#">Исполнение бюджета</a>
+                    <!-- side-menu -->
+                    <div class="side-menu side-menu_open">
+                        <header class="side-menu__head">
+                            <a class="side-menu__back-link back-link" href="#" tabindex="-1">Назад</a>
+                            <h2 class="heading side-menu__title">Исполнение бюджета</h2>
+                            <form class="side-menu__search-form">
+                                <input class="input input_full input_search" type="text" placeholder="Найти...">
+                            </form>
+                        </header>
+                        <ul class="side-list side-menu__body">
+                            <li class="side-list__item">
+                                <a class="side-list__item-text" href="#">Доходы бюджета города Москвы</a>
+                                <ul class="side-list">
+                                    <li class="side-list__item">
+                                        <a class="side-list__item-text" href="#">Структура доходов по видам</a>
+                                    </li>
+                                    <li class="side-list__item">
+                                        <a class="side-list__item-text" href="#">Поступление доходов, собираемых на территории г. Москвы</a>
+                                    </li>
+                                    <li class="side-list__item">
+                                        <a class="side-list__item-text" href="#">Поступления по отраслям экономики</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="side-list__item side-list__item_active">
+                                <a class="side-list__item-text" href="#">Исполнение бюджета по расходам</a>
+                            </li>
+                            <li class="side-list__item">
+                                <a class="side-list__item-text" href="#">Исполнение бюджета по доходам</a>
+                            </li>
+                            <li class="side-list__item">
+                                <a class="side-list__item-text" href="#">Справочник функциональной структуры расходов</a>
+                            </li>
+                            <li class="side-list__item">
+                                <a class="side-list__item-text" href="#">Справочник ГРБС</a>
+                            </li>
+                            <li class="side-list__item">
+                                <a class="side-list__item-text" href="#">Справочник ЦС</a>
+                            </li>
+                            <li class="side-list__item">
+                                <a class="side-list__item-text" href="#">Справочник видов источников финансирования дефицита бюджета</a>
+                            </li>
+                            <li class="side-list__item">
+                                <a class="side-list__item-text" href="#">Справочник видов расходов</a>
+                            </li>
+                            <li class="side-list__item">
+                                <a class="side-list__item-text" href="#">Справочник КОСГУ</a>
+                            </li>
+                            <li class="side-list__item">
+                                <a class="side-list__item-text" href="#">Справочник видов доходов</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- ./side-menu -->
+                </li>
+                <li class="side-list__item">
+                    <a class="side-list__item-text" href="#">Адресная инвестиционная программа</a>
+                </li>
+                <li class="side-list__item">
+                    <a class="side-list__item-text" href="#">Бюджетная сеть</a>
+                </li>
+                <li class="side-list__item side-list__item_has-sub-menu">
+                    <a class="side-list__item-text" href="#">Межбюджетные отношения</a>
+                </li>
+            </ul>
+        </div>
+        <!-- ./side-menu -->
+
+    </div>
+    <!-- ./page__side-nav -->
+
+    <!-- page__main -->
+    <div class="page__main">
+        <div class="head">
+            <div class="head__tools head-tools">
+                 <div class="head-tools__group">
+                    <button class="btn">
+                        <span class="btn__text">Загрузить</span>
+                    </button>
+                </div>
+                <div class="head-tools__group">
+                    <button class="btn btn_theme_add btn_ico_add">
+                        <span class="btn__text">Добавить</span>
+                    </button>
+                    <button class="head-tools__item btn btn_theme_edit btn_ico_only  btn_ico_edit" href="#"></button>
+                    <button class="head-tools__item btn btn_theme_del  btn_ico_only  btn_ico_del" href="#"></button>
+                </div>
+            </div>
+            <div class="head__content">
+                <button class="side-toggle" id="sideCollapseBtnId"></button>
+                <h2 class="head__title heading">Исполнение бюджета по расходам</h2>
+            </div>
+        </div>
+
+        <!-- .page__content -->
+        <div class="page__content">
+            <div class="table-wrap">
+                <div class="table-wrap__head">
+                    <table class="data-table">
+                        <thead class="data-table__head">
+                            <tr class="data-table__row">
+                                <th class="data-table__cell data-table__cell_head data-table__cell_id">DT</th>
+                                <th class="data-table__cell data-table__cell_head">Select</th>
+                                <th class="data-table__cell data-table__cell_head">PPP</th>
+                                <th class="data-table__cell data-table__cell_head">FKR</th>
+                                <th class="data-table__cell data-table__cell_head">CSR</th>
+                                <th class="data-table__cell data-table__cell_head">KVR</th>
+                                <th class="data-table__cell data-table__cell_head">CF_YEAR_REST</th>
+                                <th class="data-table__cell data-table__cell_head">ORD</th>
+                                <th class="data-table__cell data-table__cell_head">KOSGU</th>
+                                <th class="data-table__cell data-table__cell_head data-table__cell_border-right_off">CF_BO</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table-wrap__body">
+                    <table class="data-table data-table_row-hover">
+                        <tbody class="data-table__body">
+                            <tr class="data-table__row">
+                                <td class="data-table__cell">16.06.2015</td>
+                                <td class="data-table__cell">Выбытия</td>
+                                <td class="data-table__cell">075</td>
+                                <td class="data-table__cell">0204</td>
+                                <td class="data-table__cell">17B0100</td>
+                                <td class="data-table__cell">244</td>
+                                <td class="data-table__cell">0</td>
+                                <td class="data-table__cell">632</td>
+                                <td class="data-table__cell">221</td>
+                                <td class="data-table__cell">700</td>
+                            </tr>
+                            <tr class="data-table__row">
+                                <td class="data-table__cell">16.06.2015</td>
+                                <td class="data-table__cell">Выбытия</td>
+                                <td class="data-table__cell">075</td>
+                                <td class="data-table__cell">0204</td>
+                                <td class="data-table__cell">17B0100</td>
+                                <td class="data-table__cell">244</td>
+                                <td class="data-table__cell">169736,23</td>
+                                <td class="data-table__cell">633</td>
+                                <td class="data-table__cell">225</td>
+                                <td class="data-table__cell">1950000</td>
+                            </tr>
+                            <tr class="data-table__row">
+                                <td class="data-table__cell">16.06.2015</td>
+                                <td class="data-table__cell">Выбытия</td>
+                                <td class="data-table__cell">075</td>
+                                <td class="data-table__cell">0204</td>
+                                <td class="data-table__cell">17B0100</td>
+                                <td class="data-table__cell">244</td>
+                                <td class="data-table__cell">0</td>
+                                <td class="data-table__cell">632</td>
+                                <td class="data-table__cell">221</td>
+                                <td class="data-table__cell">700</td>
+                            </tr>
+                            <tr class="data-table__row">
+                                <td class="data-table__cell">16.06.2015</td>
+                                <td class="data-table__cell">Выбытия</td>
+                                <td class="data-table__cell">075</td>
+                                <td class="data-table__cell">0204</td>
+                                <td class="data-table__cell">17B0100</td>
+                                <td class="data-table__cell">244</td>
+                                <td class="data-table__cell">169736,23</td>
+                                <td class="data-table__cell">633</td>
+                                <td class="data-table__cell">225</td>
+                                <td class="data-table__cell">1950000</td>
+                            </tr>
+                            <tr class="data-table__row">
+                                <td class="data-table__cell">16.06.2015</td>
+                                <td class="data-table__cell">Выбытия</td>
+                                <td class="data-table__cell">075</td>
+                                <td class="data-table__cell">0204</td>
+                                <td class="data-table__cell">17B0100</td>
+                                <td class="data-table__cell">244</td>
+                                <td class="data-table__cell">0</td>
+                                <td class="data-table__cell">632</td>
+                                <td class="data-table__cell">221</td>
+                                <td class="data-table__cell">700</td>
+                            </tr>
+                            <tr class="data-table__row">
+                                <td class="data-table__cell">16.06.2015</td>
+                                <td class="data-table__cell">Выбытия</td>
+                                <td class="data-table__cell">075</td>
+                                <td class="data-table__cell">0204</td>
+                                <td class="data-table__cell">17B0100</td>
+                                <td class="data-table__cell">244</td>
+                                <td class="data-table__cell">169736,23</td>
+                                <td class="data-table__cell">633</td>
+                                <td class="data-table__cell">225</td>
+                                <td class="data-table__cell">1950000</td>
+                            </tr>
+                            <tr class="data-table__row">
+                                <td class="data-table__cell">16.06.2015</td>
+                                <td class="data-table__cell">Выбытия</td>
+                                <td class="data-table__cell">075</td>
+                                <td class="data-table__cell">0204</td>
+                                <td class="data-table__cell">17B0100</td>
+                                <td class="data-table__cell">244</td>
+                                <td class="data-table__cell">0</td>
+                                <td class="data-table__cell">632</td>
+                                <td class="data-table__cell">221</td>
+                                <td class="data-table__cell">700</td>
+                            </tr>
+                            <tr class="data-table__row">
+                                <td class="data-table__cell">16.06.2015</td>
+                                <td class="data-table__cell">Выбытия</td>
+                                <td class="data-table__cell">075</td>
+                                <td class="data-table__cell">0204</td>
+                                <td class="data-table__cell">17B0100</td>
+                                <td class="data-table__cell">244</td>
+                                <td class="data-table__cell">169736,23</td>
+                                <td class="data-table__cell">633</td>
+                                <td class="data-table__cell">225</td>
+                                <td class="data-table__cell">1950000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="table-wrap__load-more">
+                        <button class="btn btn_theme_light" id="loadMoreBtnId">Загрузить еще</button>
+                        <!-- скрипт исключительно для демонстрации загрузки -->
+                        <script>
+                            (function () {
+                                var page = document.querySelector('.page__main'),
+                                    btn = document.querySelector('#loadMoreBtnId');
+
+                                btn.addEventListener('click', function () {
+                                    page.classList.add('loading');
+                                    setTimeout(function () {
+                                        page.classList.remove('loading');
+                                    }, 3000);
+                                });
+                            })();
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ./.page__content -->
+    </div>
+    <!-- ./page__main -->
+
+
+    <div class="overlay"></div>
+</body>
+</html>
