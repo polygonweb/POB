@@ -837,7 +837,7 @@ html {
                 top: 0;
                 height: 1px;
             }
-                .data-table__row:first-child .data-table__cell_head:after {
+                .data-table__row:first-child .data-table__cell_head:not(.data-table__cell_id):after {
                     content: none;
                 }
 
@@ -875,9 +875,15 @@ html {
         /**
          * Выделенная ячейка в шапке
          */
-        .data-table__cell_id {}
+        .data-table__cell_id {
+            position: relative;
+        }
             .data-table__cell_id:after {
+                content: '';
+                position: absolute;
                 z-index: 1;
+                top: auto;
+                bottom: 0;
                 left: 0;
                 right: 0;
                 height: 2px;
